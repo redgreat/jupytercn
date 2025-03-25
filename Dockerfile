@@ -8,6 +8,12 @@ RUN apt-get update && apt-get install -y \
 ENV LANG C.UTF-8
 ENV LANGUAGE zh_CN:zh:en
 ENV LC_ALL zh_CN.UTF-8
+ENV TZ=Asia/Shanghai
+ENV DISABLE_IPV6=true
+ENV GRANT_SUDO=yes
+ENV JUPYTER_ENABLE_LAB=yes
+ENV NB_USER=wangcw
+ENV NB_UID=1000
 
 RUN pip install jupyter_contrib_nbextensions && \
     jupyter contrib nbextension install --user && \
